@@ -24,8 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('board/', include('board.urls')),
     #path('common/', include('common.urls')),
-    path('covid_checker', include('covid_checker.urls')),
-    path('dust_checker', include('dust_checker.urls')),
-    path('table', include('table.urls')),
+    path('covid_checker/', include('covid_checker.urls')),
+    path('dust_checker/', include('dust_checker.urls')),
+    path('table/', include('table.urls')),
 ]
 
