@@ -21,3 +21,8 @@ def answer_create(request, postId):
     post.answer_set.create(content=request.POST.get('content'), date=timezone.now())
     return redirect('board:detail', postId=postId)
 #Create your views here.
+
+def addpostmove(request):
+
+    return render(request, 'board/addpost.html')
+

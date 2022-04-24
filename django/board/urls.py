@@ -7,5 +7,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<int:postId>/', views.detail, name='detail'),
     path('answer/create/<int:postId>/', views.answer_create, name='answer_create'),
+    path('addpost/', views.addpostmove, name='addpostmove'),
+
 ]
 

@@ -1,8 +1,15 @@
-{% extends 'main.html' %}
+{% include "header.html" %} 
 {% block content %}
 {% load static %}
+<link href='{% static "/css/style.css" %}' rel="stylesheet">
+<section id="about" class="about">
+    <div class="container">
 
-<body id="page-top">
+</div>
+</section>>
+
+    <section id="about" class="about">
+        <div class="container">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -22,11 +29,11 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">국가별 해외 입국 제한 현황</h1>
                     <p class="mb-4">코로나19관련 국가별 입국 제한 현황을 안내드리오니, 참고하여 주시기 바랍니다.</p>
-                    <ul>
-                        <li><a href="https://www.0404.go.kr/dev/newest_list.mofa">외교부 해외안전여행 홈페이지</a></li>
-                        <li><a href="http://overseas.mofa.go.kr/returnInfoPage.do">각국 재외공관 홈페이지</a></li>
-                        <li><a href="https://www.koreanair.com/kr/ko/travel-update/covid19/travel-restriction/korea">대한항공 국가별 입국 제한 안내</a></li>
-                        <li><a href="https://flyasiana.com/C/KR/KO/contents/entry-restrictions">아시아나 국가별 입국 제한 안내</a></li>   
+                    <ul id="menu_ul">
+                        <li class="list-group-item" id="menu_li"><a href="https://www.0404.go.kr/dev/newest_list.mofa">외교부 해외안전여행 홈페이지</a></li>
+                        <li class="list-group-item" id="menu_li"><a href="http://overseas.mofa.go.kr/returnInfoPage.do">각국 재외공관 홈페이지</a></li>
+                        <li class="list-group-item"><a href="https://www.koreanair.com/kr/ko/travel-update/covid19/travel-restriction/korea">대한항공 국가별 입국 제한 안내</a></li>
+                        <li class="list-group-item"><a href="https://flyasiana.com/C/KR/KO/contents/entry-restrictions">아시아나 국가별 입국 제한 안내</a></li>   
                     </ul>
                     <p class="mb-4">자세한 내용은 외교부 여행안전사이트의 최신안전소식 또는 방문하시려는 국가/지역 정보의 공식 홈페이지 또는 각국 재외공관 홈페이지를 참고하여 주시기 바랍니다.</p>
                     <!-- DataTales Example -->
@@ -151,66 +158,13 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+</div>
+</div>
 
-        </div>
-        <!-- End of Content Wrapper -->
+</div>
+</section>
 
-    </div>
-    <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{% static 'js/demo/datatables-demo.js"></script>
-
-</body>
-
-</html>
 
 {% endblock %}

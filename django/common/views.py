@@ -1,6 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from .models import Profile
+from .models import Profile 
+from django.contrib.auth.models import User
 
 def index(request):
     return render(request, 'main.html')
