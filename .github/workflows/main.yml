@@ -30,7 +30,7 @@ jobs:
         
       - name: docker build
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django_latest ./Dockerfile
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django_latest . 
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django__${{ env.RELEASE_NUMBER }} .
         
       - name: Login to Docker Hub
