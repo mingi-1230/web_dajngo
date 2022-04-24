@@ -2,18 +2,12 @@
 {% block content %}
 {% load static %}
 <link href='{% static "/css/style.css" %}' rel="stylesheet">
-<section id="about" class="about" >
-    <div class="container">
-        
-</div>
-<section id="about" class="about" >
-    <div class="container">
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
         
 </div>
 <div class="container my-3">
-    {% if user.is_authenticated %}
-    <button class="btn btn-primary"  onclick="location.href='{% url 'board:addpostmove' %}'">글쓰기</button>
-    {% endif %}
     <table class="table">
         <thead>
             <tr class="thead-dark">
@@ -35,8 +29,15 @@
         {% endif %}
         </tbody>
     </table>
-</div>
 
+    <div style="float: right; margin-top: 20px;">
+    {% if user.is_authenticated %}
+    <button class="btn btn-outline-success" onclick="location.href='{% url 'board:addpostmove' %}'">글쓰기</button>
+    {% endif %}
+    </div>
+</div>
+</div>
+</section>
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
