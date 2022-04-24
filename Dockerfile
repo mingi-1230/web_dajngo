@@ -5,7 +5,7 @@ RUN pip3 install pymysql==1.0.2
 RUN pip install django-redis
 RUN pip install requests
 RUN pip install bs4
-
+ 
 WORKDIR /usr/src/app
 
 RUN mkdir -p /usr/src/app
