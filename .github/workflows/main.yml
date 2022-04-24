@@ -41,5 +41,5 @@ jobs:
           
       - name: docker push
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/m-dev:tomcat_latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/m-dev:tomcat_$GITHUB_RUN_NUMBER
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django_latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django__${{ env.RELEASE_NUMBER }}
