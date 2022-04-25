@@ -43,3 +43,15 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django_latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/cicd:django__${{ env.RELEASE_NUMBER }}
+
+      - name: Deploy
+        uses: safe2008/eks-actions@v0.0.4
+        env:
+          aws_access_key_id: ${{ secrets.AWS_KEYID }}
+          aws_secret_access_key: ${{ secrets.AWS_KEY }}
+          aws_region: ${{ secrets.AWS_REGION }}
+          cluster_name: ${{ secrets.CLUSTER_NAME }}
+        with:
+          args: | 
+            kubectl rollout restart deployment/was
+            aws s3 cp Dockerfile s3://${{ secrets.BUCKET_NAME }}/${{ github.run_number }}

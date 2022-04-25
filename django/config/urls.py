@@ -27,5 +27,6 @@ urlpatterns = [
     path('covid_checker', include('covid_checker.urls')),
     path('dust_checker', include('dust_checker.urls')),
     path('table', include('table.urls')),
+    path('abroad_checker', include('abroad_checker.urls')),
 ]
 

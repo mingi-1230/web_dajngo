@@ -5,9 +5,12 @@
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
         <div class="container">
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
 <div class="container">
 
-    <form action="" method="post">
+    <form action="{% url 'board:post_new_modelform'%}" method="post">
         <div class="form-group">
             {% csrf_token%}
             <p><label>제목</label><input name="title" class="form-control"></p>
@@ -15,7 +18,7 @@
             <textarea name="content" cols="50" rows="20" class="form-control"></textarea>
 
         </div>
-        <div style="float: right; margin-top: 20px;">
+        <div class="form-group"style="float: right; margin-top: 20px;">
         <p><input type="submit" class="btn btn-outline-success pull-right" value="게시물 저장"></p>
         </div>
         </form>

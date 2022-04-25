@@ -7,6 +7,8 @@
         <div class="container">
         
 </div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
 <div class="container my-3">
     <table class="table">
         <thead>
@@ -32,9 +34,11 @@
 
     <div style="float: right; margin-top: 20px;">
     {% if user.is_authenticated %}
-    <button class="btn btn-outline-success" onclick="location.href='{% url 'board:addpostmove' %}'">글쓰기</button>
+    <a href="{% url 'board:addpostmove' %}"><button class="btn btn-outline-success">글쓰기</button></a>
     {% endif %}
     </div>
+</div>
+</div>
 </div>
 </div>
 </section>
